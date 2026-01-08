@@ -1,7 +1,205 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hwang Tae Kang's Page</title>
+    <style>
+        /* 1. 폰트 설정 */
+        @font-face {
+            font-family: 'KakaoBig';
+            src: url('./fonts/KakaoBigSans-Bold.ttf') format('truetype'); 
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            padding-top: 120px; 
+            padding-bottom: 60px; 
+        }
+
+        /* ---------------------------------------------------------
+           [Navigation Bar] - Flexbox 적용으로 양끝 정렬
+           --------------------------------------------------------- */
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 30px; 
+            box-sizing: border-box; 
+            
+            /* [수정] 양쪽 끝 정렬을 위한 Flex 설정 */
+            display: flex;
+            justify-content: space-between; /* 왼쪽 덩어리와 오른쪽 덩어리 사이를 벌림 */
+            align-items: center; /* 수직 중앙 정렬 */
+            
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 0.95rem; 
+        }
+
+        /* 왼쪽 메뉴들을 감싸는 컨테이너 */
+        .nav-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none; 
+            color: #000;           
+            margin-right: 25px;    
+            font-weight: 500;      
+            transition: color 0.2s; 
+        }
+
+        .nav-link:hover {
+            color: #666;           
+            text-decoration: underline; 
+        }
+
+        .nav-link.active {
+            color: red !important;
+            font-weight: bold;
+        }
+
+        /* [추가] 오른쪽 아이콘 스타일 */
+        .nav-icon-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .nav-icon-img {
+            height: 24px; /* 아이콘 크기 조절 (글자 크기와 비슷하게) */
+            width: auto;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .nav-icon-img:hover {
+            opacity: 0.6; /* 마우스 올리면 살짝 투명해짐 */
+        }
+
+        /* ---------------------------------------------------------
+           [Header Area] 안녕하세요 / Hello
+           --------------------------------------------------------- */
+        .header-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px; 
+        }
+
+        .title-text {
+            font-family: 'KakaoBig', sans-serif;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+            line-height: 0.9; 
+        }
+
+        .line-kr {
+            font-size: 2.8rem;
+        }
+
+        .line-en {
+            font-size: 4.5rem; 
+            letter-spacing: 2px;
+            margin-top: 10px;
+        }
+
+        /* ---------------------------------------------------------
+           [Bio Area] 자기소개
+           --------------------------------------------------------- */
+        .bio-text {
+            width: 1000px; 
+            max-width: 90vw;
+            box-sizing: border-box;
+            
+            padding: 0 20px; 
+            margin-bottom: 50px; 
+
+            font-family: "Times New Roman", Times, serif;
+            text-align: justify; 
+            
+            line-height: 1.6;
+            color: #000000;
+            font-size: 1.1rem;
+        }
+
+        /* ---------------------------------------------------------
+           [Image Area] 프로필 사진 및 캡션
+           --------------------------------------------------------- */
+        .profile-container {
+            width: 1000px;
+            max-width: 90vw; 
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 400px; 
+            object-fit: cover;
+        }
+
+        .caption {
+            font-family: "Times New Roman", Times, serif; 
+            font-style: italic; 
+            font-size: 0.9rem;
+            color: #000000;
+            margin-top: 10px;
+            text-align: left; 
+        }
+
+        /* 모바일 대응 */
+        @media (max-width: 600px) {
+            .line-kr { font-size: 3rem; }
+            .line-en { font-size: 4.2rem; }
+            .profile-img { height: auto; aspect-ratio: 10/4; }
+            
+            .navbar { padding: 15px 20px; }
+            .nav-link { margin-right: 15px; }
+        }
+    </style>
+</head>
 <body>
-    <h1>안녕하세요!</h1>
-    <p>제 첫 번째 깃허브 페이지입니다.</p>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="cv.html" class="nav-link">CV</a>
+            <a href="publications.html" class="nav-link">Publications</a>
+            <a href="https://comet.kaist.ac.kr/people/" class="nav-link">Group</a>
+        </div>
+
+        <a href="notes.html" class="nav-icon-link">
+            <img src="./img/poly.png" alt="Notes" class="nav-icon-img">
+        </a>
+    </nav>
+
+    <div class="header-box">
+        <div class="title-text line-kr">안녕하세요!</div>
+        <div class="title-text line-en">Hello!</div>
+    </div>
+
+    <div class="bio-text">
+        I am Taekang Hwang: <span class="ipa">[tʰɛ.gaŋ hwaŋ]</span>, a Ph.D. student in the ISE Department at Korea Advanced Institute of Science and Technology, South Korea.
+        My research interests span the <strong>theory of integer programming</strong>, combinatorial optimization, polyhedral combinatorics, and algorithms for discrete optimization. Currently, I am actively working on various topics related to <strong>cutting-plane methods for urban transportation problems</strong>, such as the traveling salesman problem with drone and the crew scheduling problem.
+    </div>
+
+    <div class="profile-container">
+        <img src="./img/profile.png" alt="Profile Image" class="profile-img">
+        <div class="caption">
+            "At 2025 KIIE conference in Jeju"
+        </div>
+    </div>
+
 </body>
 </html>

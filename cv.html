@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Hwang Tae Kang</title>
+    <style>
+        /* 폰트 설정 */
+        @font-face {
+            font-family: 'KakaoBig';
+            src: url('./fonts/KakaoBigSans-Bold.ttf') format('truetype'); 
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            /* 상단 여백 160px 유지 */
+            padding-top: 160px; 
+            padding-bottom: 80px;
+        }
+
+        /* ---------------------------------------------------------
+           [Navigation Bar]
+           --------------------------------------------------------- */
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 30px;
+            box-sizing: border-box;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #000;
+            margin-right: 25px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover {
+            color: #666;
+            text-decoration: underline;
+        }
+
+        /* 활성화된 메뉴 빨간색 처리 */
+        .nav-link.active {
+            color: red !important;
+            font-weight: bold;
+        }
+
+        /* ---------------------------------------------------------
+           [CV Layout Style]
+           --------------------------------------------------------- */
+        .cv-container {
+            width: 1000px;
+            max-width: 90vw;
+            text-align: left;
+            color: #333;
+        }
+
+        .cv-header {
+            text-align: center;
+            margin-bottom: 60px; 
+        }
+        .cv-name {
+            font-family: 'KakaoBig', sans-serif; 
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .cv-contact {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .cv-section {
+            margin-bottom: 60px;
+        }
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #ddd; 
+            padding-bottom: 5px;
+            margin-bottom: 20px; 
+            letter-spacing: 1px;
+            color: #000;
+        }
+
+        .cv-item {
+            margin-bottom: 15px;
+            line-height: 1.6; 
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between; 
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        
+        .item-sub {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        ul {
+            margin: 5px 0 10px 20px; 
+            padding: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+
+        a.email-link {
+            color: #333;
+            text-decoration: none;
+            border-bottom: 1px dotted #333;
+        }
+
+        @media (max-width: 600px) {
+            .item-header {
+                flex-direction: column; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="cv.html" class="nav-link active">CV</a>
+        <a href="publications.html" class="nav-link">Publications</a>
+        <a href="https://comet.kaist.ac.kr/people/" class="nav-link">Group</a>
+    </nav>
+
+    <div class="cv-container">
+        
+        <div class="cv-header">
+            <div class="cv-name">Taekang Hwang</div>
+            <div class="cv-contact">
+                Korea Insitute of Advanced Science and Tehchnology (KAIST)<br>
+                Industrial & Systems Engineering (ISE)<br>
+                (+82) 10-4246-6598 | <a href="mailto:kang312345@kaist.ac.kr" class="email-link">kang312345@kaist.ac.kr</a><br>
+                291, Daehak-ro, Yuseong-gu, Daejeon, Republic of Korea
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <div class="section-title">Research Interests</div>
+            <div class="cv-item">
+                My research interests span the <strong>theory of integer programming</strong>, combinatorial optimization, polyhedral combinatorics, and algorithms for discrete optimization.<br>
+                Currently, I am actively working on various topics related to <strong>cutting-plane methods for urban transportation problems</strong>, such as the traveling salesman problem with drone and the crew scheduling problem.
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <div class="section-title">Education</div>
+            
+            <div class="cv-item">
+                <div class="item-header">
+                    <span>Korea Insitute of Advanced Science and Tehchnology (KAIST)</span>
+                    <span>Aug 2024 -- Aug 2029 (expected)</span>
+                </div>
+                <div class="item-sub">Integrated M.S./Ph.D. Program in Industrial & Systems Engineering</div>
+            </div>
+
+            <div class="cv-item">
+                <div class="item-header">
+                    <span>Hankuk University of Foreign Studies (HUFS)</span>
+                    <span>Mar 2020 -- Aug 2024</span>
+                </div>
+                <div class="item-sub">B.S. in Industrial Management & Engineering<br>B.S. in Statistics</div>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <div class="section-title">Research Experiences</div>
+            
+            <div class="cv-item">
+                <div class="item-header">
+                    <span>Computational Optimization Methods Lab (COMET) @ KAIST</span>
+                    <span>Aug 2024 -- Present</span>
+                </div>
+                <ul>
+                    <li>Research area: Integer programming, polyhedral combinatorics, cutting plane methods, algorithms, and neural combinatorial optimization.</li>
+                </ul>
+            </div>
+
+            <div class="cv-item">
+                <div class="item-header">
+                    <span>Deep Mobility Consortium @ KAIST</span>
+                    <span>Jan 2025 -- Present</span>
+                </div>
+                <ul>
+                    <li>Research area: Large-scale intelligence algorithms for urban mobility.</li>
+                </ul>
+            </div>
+
+            <div class="cv-item">
+                <div class="item-header">
+                    <span>Optimization Lab (Opt Lab) @ HUFS</span>
+                    <span>Feb 2023 -- Jul 2024</span>
+                </div>
+                <ul>
+                    <li>Research area: Integer programming, stochastic optimization, and algorithms.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <div class="section-title">Industry Projects</div>
+            <div class="cv-item">
+                <div class="item-header">
+                    <span>Samsung Electronics Co., Ltd.</span>
+                    <span>Jan 2025 -- Aug 2025</span>
+                </div>
+                <ul>
+                    <li>Role: Developing algorithms and designing database structures for predicting photomask fabrication lead time.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <div class="section-title">Working Papers</div>
+            <ul>
+                <li>Taekang Hwang and Changhyun Kwon, Visits to the TSP-Drone Polytope: Facet-defining Inequalities and an Alternative Compact Formulations.</li>
+            </ul>
+        </div>
+
+        <div class="cv-section">
+            <div class="section-title">Conferences</div>
+            <ul>
+                <li>(Accepted) Taekang Hwang* and Changhyun Kwon, "Visits to the TSP-Drone Polytope: Bi-Cycle Elimination Inequalities and Two Alternative Compact Formulations", <strong>2025 INFORS Annual Meeting</strong>, Atlanta, GA, USA, October 26--29, 2025.</li>
+                <li>Taekang Hwang* and Changhyun Kwon, "Visits to the TSP-Drone Polytope: Bi-Cycle Elimination Inequalities and Two Alternative Compact Formulations", <strong>Spring Conference of Korean Institute of Industrial Engineers, 2025</strong>, Jeju, Korea, June 18--21, 2025.</li>
+                <li>Taekang Hwang*, Hyun-seo Sung, Ga-hui Lee, June Chae, Chungmok Lee, "The Vehicle Routing Problem with Stochastic Vehicles", <strong>Spring Conference of Korean Institute of Industrial Engineers, 2023</strong>, Jeju, Korea, May 31--June 3, 2023.</li>
+            </ul>
+        </div>
+
+        <div class="cv-section">
+            <div class="section-title">Teaching & Mentoring Experiences</div>
+            <div class="cv-item">
+                <strong>Teaching Assistant</strong>
+                <ul>
+                    <li>Operations Research: Optimization, IE30031, Spring, 2025.</li>
+                </ul>
+                <strong>Internship Tutor</strong>
+                <ul>
+                    <li>Computational Optimization Methods Lab (COMET) Summer Internship Tutor, 2025.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <div class="section-title">Awards</div>
+            <ul>
+                <li>A crowd-shipping based last-mile delivery system that utilizes everyday walking routines, <strong>1st-place</strong> in <strong>the 19th Student Industrial Engineering Project Contest</strong>, KIIE, 2023.</li>
+            </ul>
+        </div>
+
+        <div class="cv-section">
+            <div class="section-title">Professional Service</div>
+            <ul>
+                <li>Organizing staff, INFORMS TSL Workshop 2025.</li>
+            </ul>
+        </div>
+
+        <div class="cv-section">
+            <div class="section-title">Additional Training & Workshops</div>
+            <ul>
+                <li>Introduction to Modern Combinatorial Optimization, CALOP Winter Lecture Series 2025 at POSTECH.</li>
+            </ul>
+        </div>
+
+        <div class="cv-section">
+            <div class="section-title">Technical Skills</div>
+            <ul>
+                <li>Programming Languages: <code>C/C++/C#</code>, <code>Python</code>, <code>Julia</code>, <code>R</code>, <code>JavaScript</code>.</li>
+                <li>Tools: Git/GitHub, LaTeX, Arena, Unity.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes - Hwang Tae Kang</title>
+    <style>
+        /* 폰트 및 공통 스타일 (index.html과 동일) */
+        @font-face {
+            font-family: 'KakaoBig';
+            src: url('./fonts/KakaoBigSans-Bold.ttf') format('truetype'); 
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 160px; /* 서브 페이지는 헤더 공간 충분히 */
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* 네비게이션 바 스타일 */
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 30px; 
+            box-sizing: border-box; 
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 0.95rem; 
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none; 
+            color: #000;           
+            margin-right: 25px;    
+            font-weight: 500;      
+            transition: color 0.2s; 
+        }
+        .nav-link:hover { color: #666; text-decoration: underline; }
+        .nav-link.active { color: red !important; font-weight: bold; }
+
+        .nav-icon-link { display: flex; align-items: center; text-decoration: none; }
+        .nav-icon-img {
+            height: 24px;
+            width: auto;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .nav-icon-img:hover { opacity: 0.6; }
+
+        /* 깡통 페이지 내용 스타일 */
+        .empty-content {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'KakaoBig', sans-serif;
+            font-size: 5rem;
+            color: #ccc;
+            margin-bottom: 160px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="cv.html" class="nav-link">CV</a>
+            <a href="publications.html" class="nav-link">Publications</a>
+            <a href="https://comet.kaist.ac.kr/people/" class="nav-link">Group</a>
+        </div>
+        
+        <a href="notes.html" class="nav-icon-link">
+            <img src="./img/poly.png" alt="Notes" class="nav-icon-img" style="opacity: 0.5;"> 
+        </a>
+    </nav>
+
+    <div class="empty-content">
+        Notes...
+    </div>
+
+</body>
+</html>

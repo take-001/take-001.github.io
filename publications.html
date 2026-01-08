@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Hwang Tae Kang</title>
+    <style>
+        /* 1. 폰트 설정 (공통) */
+        @font-face {
+            font-family: 'KakaoBig';
+            src: url('./fonts/KakaoBigSans-Bold.ttf') format('truetype'); 
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+            
+            /* 전체 화면 중앙 정렬을 위한 설정 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            /* 상단 여백 (다른 페이지와 동일하게 160px) */
+            padding-top: 160px; 
+            min-height: 100vh; /* 화면 전체 높이 사용 */
+            box-sizing: border-box;
+        }
+
+        /* ---------------------------------------------------------
+           [Navigation Bar] (공통)
+           --------------------------------------------------------- */
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 30px;
+            box-sizing: border-box;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #000;
+            margin-right: 25px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover {
+            color: #666;
+            text-decoration: underline;
+        }
+
+        /* [활성화된 메뉴 스타일] 빨간색 */
+        .nav-link.active {
+            color: red !important;
+            font-weight: bold;
+        }
+
+        /* ---------------------------------------------------------
+           [Empty Page Style] 깡통 페이지 전용 스타일
+           --------------------------------------------------------- */
+        .empty-content {
+            /* 화면의 나머지 공간에서 정중앙에 오도록 설정 */
+            flex-grow: 1; /* 남은 공간 차지 */
+            display: flex;
+            justify-content: center; /* 가로 중앙 */
+            align-items: center;     /* 세로 중앙 */
+            
+            /* 스타일링 */
+            font-family: 'KakaoBig', sans-serif;
+            font-size: 5rem; /* 아주 크게 */
+            color: #ccc;     /* 연한 회색 */
+            margin-bottom: 160px; /* 시각적 균형을 위해 하단 여백 추가 */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="cv.html" class="nav-link">CV</a>
+        <a href="publications.html" class="nav-link active">Publications</a>
+        <a href="https://comet.kaist.ac.kr/people/" class="nav-link">Group</a>
+    </nav>
+
+    <div class="empty-content">
+        ...
+    </div>
+
+</body>
+</html>
